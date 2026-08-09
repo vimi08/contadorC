@@ -1,5 +1,5 @@
 import Header from "./components/Header";
-
+import Teoria from "./components/Teoria";
 function App() {
   //AQUI VA LA LÓGICA DEL COMPONENTE
   return (
@@ -7,7 +7,9 @@ function App() {
     {/*AQUI COMIENZ<A LA ZONA DEL HTML}
       {/*<Header></Header>*/}
       <Header/>
-      <h1>Hola Mundo </h1>
+     <main className="container">
+      <Teoria></Teoria>
+     </main>
     </>
   );
 }
