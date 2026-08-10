@@ -1,7 +1,4 @@
-
-const Teoria = (props) => {
-
-
+const Teoria = ({ comision, modulo }) => {
   return (
     <section>
       <h2>Componentes de react</h2>
@@ -25,7 +22,7 @@ const Teoria = (props) => {
         automaticamente en la interfaz de ususario
       </p>
       <div className="alert alert-primary" role="alert">
-        Comisión : {props.comision} - Módulo : {props.modulo}
+        Comisión : {comision} - Módulo : {modulo}
       </div>
     </section>
   );
