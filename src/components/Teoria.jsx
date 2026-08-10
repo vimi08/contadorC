@@ -1,6 +1,7 @@
-import React from "react";
 
-const Teoria = () => {
+const Teoria = (props) => {
+
+
   return (
     <section>
       <h2>Componentes de react</h2>
@@ -23,6 +24,9 @@ const Teoria = () => {
         interactivas , donde los cambios en los datos se reflejan
         automaticamente en la interfaz de ususario
       </p>
+      <div className="alert alert-primary" role="alert">
+        Comisión : {props.comision} - Módulo : {props.modulo}
+      </div>
     </section>
   );
 };

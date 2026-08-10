@@ -1,6 +1,6 @@
 import Header from "./components/Header";
 import Teoria from "./components/Teoria";
-import Footer from "./components/Footer"
+import Footer from "./components/Footer";
 
 function App() {
   //AQUI VA LA LÓGICA DEL COMPONENTE
@@ -10,7 +10,7 @@ function App() {
       {/*<Header></Header>*/}
       <Header />
       <main className="container">
-        <Teoria></Teoria>
+        <Teoria comision="c25" modulo={2} />
       </main>
       <Footer></Footer>
     </>
