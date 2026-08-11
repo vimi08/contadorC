@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Header from "./components/Header";
 import Teoria from "./components/Teoria";
 import Footer from "./components/Footer"
@@ -18,3 +19,16 @@ function App() {
 }
 
 export default App;
+=======
+
+
+function App() {
+  
+
+  return (
+    <h1>Hola Mundo</h1>
+   )  
+}
+
+export default App
+>>>>>>> 3a00466 (limpiamos la estructura e instalamos bootstrap)

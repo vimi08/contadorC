@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "contador",
+=======
+  "name": "lista-tareas",
+>>>>>>> 3a00466 (limpiamos la estructura e instalamos bootstrap)
   "private": true,
   "version": "0.0.0",
   "type": "module",
