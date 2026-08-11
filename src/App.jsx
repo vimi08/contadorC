@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-import Header from "./components/Header";
-import Teoria from "./components/Teoria";
-import Footer from "./components/Footer"
+
 
 function App() {
   //AQUI VA LA LÓGICA DEL COMPONENTE
@@ -19,16 +16,20 @@ function App() {
 }
 
 export default App;
-=======
-
 
 function App() {
-  
-
   return (
-    <h1>Hola Mundo</h1>
-   )  
+    <>
+      <header className="text-center my-3">
+        <h1>Lista de Tareas</h1>
+      </header>
+      <main className="container my-3">
+        <FormularioTarea/>
+      </main>
+      <footer className="bg-black text-center py-3"><p>&copy; Todos los derechos reservados</p></footer>
+    </>
+  );
 }
 
+
 export default App
->>>>>>> 3a00466 (limpiamos la estructura e instalamos bootstrap)
