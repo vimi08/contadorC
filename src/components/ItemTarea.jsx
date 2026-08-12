@@ -1,11 +1,12 @@
-
-
 const ItemTarea = () => {
-    return (
-        <li>
-            item
-        </li>
-    );
+  return (
+    <li
+      className="list-group-item d-flex justify-content-between align-items-center
+        "
+    >
+      tarea 1 <button className="btn btn-danger">Eliminar</button>
+    </li>
+  );
 };
 
 export default ItemTarea;

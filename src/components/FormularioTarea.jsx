@@ -1,3 +1,5 @@
+import ListaTarea from "./ListaTarea";
+
 const FormularioTarea = () => {
   return (
     <section>
@@ -18,6 +20,7 @@ const FormularioTarea = () => {
           Enviar
         </button>
       </form>
+      <ListaTarea/>
     </section>
   );
 };

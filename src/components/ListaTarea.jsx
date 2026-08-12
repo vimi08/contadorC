@@ -1,9 +1,9 @@
-
+import ItemTarea from "./ItemTarea"
 
 const ListaTarea = () => {
     return (
-        <ul>
-            
+        <ul className="list-group my-4">
+            <ItemTarea/>
         </ul>
     );
 };
