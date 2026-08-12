@@ -1,11 +1,25 @@
-
-
 const FormularioTarea = () => {
-    return (
-        <div>
-            <p>aqui va el formulario</p>
+  return (
+    <section>
+      <form>
+        <div className="mb-3">
+          <label htmlFor="tarea" className="form-label">
+            Ingresa una Tarea
+          </label>
+          <input
+            type="text"
+            placeholder="Ej: tarea1"
+            className="form-control"
+            id="tarea"
+            aria-describedby="emailHelp"
+          />
         </div>
-    );
+        <button type="submit" className="btn btn-primary">
+          Enviar
+        </button>
+      </form>
+    </section>
+  );
 };
 
 export default FormularioTarea;
