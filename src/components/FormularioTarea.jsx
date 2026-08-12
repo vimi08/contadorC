@@ -1,14 +1,22 @@
 import { useState } from "react";
 import ListaTarea from "./ListaTarea";
+import { useEffect } from "react";
 
 const FormularioTarea = () => {
-  const [tareas, setTareas] = useState([]);
+  const tareasLocalstorage =
+    JSON.parse(localStorage.getItem("tareasKey")) || [];
+
+  const [tareas, setTareas] = useState(tareasLocalstorage);
   const [tarea, setTarea] = useState("");
+
+  useEffect(() => {
+    localStorage.setItem("tareasKey", JSON.stringify(tareas));
+  }, [tareas]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const tareaExistente = tareas.find(
-      (item) => item.toLowerCase().trim() === tarea.toLowerCase().trim()
+      (item) => item.toLowerCase().trim() === tarea.toLowerCase().trim(),
     );
     if (tareaExistente) {
       return alert("No puedes cargar una tarea duplicada");
@@ -42,7 +50,8 @@ const FormularioTarea = () => {
           Enviar
         </button>
       </form>
-      <ListaTarea tareas={tareas} borrarTarea={borrarTarea} /> {/* ✅ corregido */}
+      <ListaTarea tareas={tareas} borrarTarea={borrarTarea} />{" "}
+      {/* ✅ corregido */}
     </section>
   );
 };
