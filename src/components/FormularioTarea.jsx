@@ -1,6 +1,9 @@
+import { useState } from "react";
 import ListaTarea from "./ListaTarea";
 
 const FormularioTarea = () => {
+  const [tareas, setTareas] = useState([]);
+const [tarea, setTarea]=useState('')
   return (
     <section>
       <form>
@@ -14,13 +17,15 @@ const FormularioTarea = () => {
             className="form-control"
             id="tarea"
             aria-describedby="emailHelp"
+            onChange={(e)=> setTarea(e.target.value)}
+            value={tarea}
           />
         </div>
         <button type="submit" className="btn btn-primary">
           Enviar
         </button>
       </form>
-      <ListaTarea/>
+      <ListaTarea />
     </section>
   );
 };
