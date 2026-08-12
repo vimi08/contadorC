@@ -7,6 +7,12 @@ const FormularioTarea = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const tareaExistente = tareas.find(
+      (item) => item.toLowerCase().trim() === tarea.toLowerCase().trim()
+    );
+    if (tareaExistente) {
+      return alert("No puedes cargar una tarea duplicada");
+    }
     console.log("hola");
     setTareas([...tareas, tarea]);
     // limpiar el formulario
@@ -33,7 +39,7 @@ const FormularioTarea = () => {
           Enviar
         </button>
       </form>
-      <ListaTarea tareas={tareas}/>
+      <ListaTarea tareas={tareas} />
     </section>
   );
 };
