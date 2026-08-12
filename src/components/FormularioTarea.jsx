@@ -33,7 +33,7 @@ const FormularioTarea = () => {
           Enviar
         </button>
       </form>
-      <ListaTarea />
+      <ListaTarea tareas={tareas}/>
     </section>
   );
 };
