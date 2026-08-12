@@ -13,10 +13,13 @@ const FormularioTarea = () => {
     if (tareaExistente) {
       return alert("No puedes cargar una tarea duplicada");
     }
-    console.log("hola");
     setTareas([...tareas, tarea]);
-    // limpiar el formulario
-    setTarea("");
+    setTarea(""); // limpiar input
+  };
+
+  const borrarTarea = (tareaEliminar) => {
+    const tareasFiltradas = tareas.filter((item) => item !== tareaEliminar);
+    setTareas(tareasFiltradas); // ✅ corregido
   };
 
   return (
@@ -39,7 +42,7 @@ const FormularioTarea = () => {
           Enviar
         </button>
       </form>
-      <ListaTarea tareas={tareas} />
+      <ListaTarea tareas={tareas} borrarTarea={borrarTarea} /> {/* ✅ corregido */}
     </section>
   );
 };
