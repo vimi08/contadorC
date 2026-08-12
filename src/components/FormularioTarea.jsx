@@ -3,10 +3,19 @@ import ListaTarea from "./ListaTarea";
 
 const FormularioTarea = () => {
   const [tareas, setTareas] = useState([]);
-const [tarea, setTarea]=useState('')
+  const [tarea, setTarea] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("hola");
+    setTareas([...tareas, tarea]);
+    // limpiar el formulario
+    setTarea("");
+  };
+
   return (
     <section>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="tarea" className="form-label">
             Ingresa una Tarea
@@ -16,8 +25,7 @@ const [tarea, setTarea]=useState('')
             placeholder="Ej: tarea1"
             className="form-control"
             id="tarea"
-            aria-describedby="emailHelp"
-            onChange={(e)=> setTarea(e.target.value)}
+            onChange={(e) => setTarea(e.target.value)}
             value={tarea}
           />
         </div>
